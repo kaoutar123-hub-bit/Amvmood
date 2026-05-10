@@ -20,11 +20,20 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if (env('APP_ENV') === 'production') {
+            \URL::forceScheme('https');
+        }
+
         VerifyEmail::toMailUsing(function ($notifiable, $url) {
+            $frontendUrl = str_replace(
+                env('APP_URL'),
+                env('FRONTEND_URL'),
+                $url
+            );
             return (new MailMessage)
                 ->subject('Verifica tu correo')
                 ->line('Haz clic en el botón para verificar tu correo')
-                ->action('verifica to correo', $url);
+                ->action('verifica to correo', $frontendUrl);
         });
     }
 }
