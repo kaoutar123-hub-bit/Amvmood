@@ -25,15 +25,11 @@ class AppServiceProvider extends ServiceProvider
         }
 
         VerifyEmail::toMailUsing(function ($notifiable, $url) {
-            $frontendUrl = str_replace(
-                env('APP_URL'),
-                env('FRONTEND_URL'),
-                $url
-            );
+
             return (new MailMessage)
                 ->subject('Verifica tu correo')
                 ->line('Haz clic en el botón para verificar tu correo')
-                ->action('verifica to correo', $frontendUrl);
+                ->action('verifica to correo', $url);
         });
     }
 }
