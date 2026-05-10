@@ -2,12 +2,11 @@
 IS_LARAVEL = "true"
 
 [phases.setup]
-nixPkgs = ["php82", "php82Extensions.pdo_mysql", "php82Extensions.mbstring", "php82Extensions.xml", "php82Extensions.curl", "php82Extensions.zip", "php82Extensions.tokenizer", "php82Extensions.fileinfo"]
-cmds = ["curl -sS https://getcomposer.org/installer -o composer-setup.php && php composer-setup.php && mv composer.phar /usr/local/bin/composer && chmod +x /usr/local/bin/composer"]
+nixPkgs = ["php82", "php82Extensions.pdo_mysql", "php82Extensions.mbstring", "php82Extensions.xml", "php82Extensions.curl", "php82Extensions.zip", "php82Extensions.tokenizer", "php82Extensions.fileinfo", "php82Packages.composer"]
 
 [phases.build]
 cmds = [
-    "/usr/local/bin/composer install --no-dev --optimize-autoloader",
+    "php82Packages.composer install --no-dev --optimize-autoloader",
     "php artisan config:cache",
     "php artisan route:cache",
     "php artisan migrate --force",
