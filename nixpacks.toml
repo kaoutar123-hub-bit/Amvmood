@@ -1,7 +1,7 @@
+providers = ["php"]
+
 [variables]
 IS_LARAVEL = "true"
-
-providers = ["php"]
 
 [phases.setup]
 nixPkgs = ["php83", "php83Extensions.pdo_mysql", "php83Extensions.mbstring", "php83Extensions.xml", "php83Extensions.curl", "php83Extensions.zip", "php83Extensions.tokenizer", "php83Extensions.fileinfo"]
