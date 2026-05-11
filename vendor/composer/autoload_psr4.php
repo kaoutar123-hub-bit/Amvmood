@@ -40,6 +40,7 @@ return array(
     'Symfony\\Component\\CssSelector\\' => array($vendorDir . '/symfony/css-selector'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
     'Symfony\\Component\\Clock\\' => array($vendorDir . '/symfony/clock'),
+    'Sichikawa\\LaravelSendgridDriver\\' => array($vendorDir . '/s-ichikawa/laravel-sendgrid-driver/src'),
     'Resend\\Laravel\\' => array($vendorDir . '/resend/resend-laravel/src'),
     'Resend\\' => array($vendorDir . '/resend/resend-php/src'),
     'Ramsey\\Uuid\\' => array($vendorDir . '/ramsey/uuid/src'),

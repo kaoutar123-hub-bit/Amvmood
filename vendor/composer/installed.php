@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '9bd95124c83d958b02556dbe6376cc9d9b289ff6',
+        'reference' => 'de0aeafcd6464bffcf09dc70190257247cf24123',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -400,7 +400,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '9bd95124c83d958b02556dbe6376cc9d9b289ff6',
+            'reference' => 'de0aeafcd6464bffcf09dc70190257247cf24123',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -812,8 +812,8 @@
             'dev_requirement' => false,
             'provided' => array(
                 0 => '1.0 || 2.0 || 3.0',
-                1 => '3.0.0',
-                2 => '1.0|2.0|3.0',
+                1 => '1.0|2.0|3.0',
+                2 => '3.0.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -899,6 +899,15 @@
             'replaced' => array(
                 0 => '4.9.2',
             ),
+        ),
+        's-ichikawa/laravel-sendgrid-driver' => array(
+            'pretty_version' => '4.0.11',
+            'version' => '4.0.11.0',
+            'reference' => '403c50812c3241b7ef5e694b5ab5304b9594cb59',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../s-ichikawa/laravel-sendgrid-driver',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'sebastian/cli-parser' => array(
             'pretty_version' => '4.2.0',

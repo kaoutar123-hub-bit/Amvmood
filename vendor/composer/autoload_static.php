@@ -17,8 +17,8 @@ class ComposerStaticInitc57754c93ae34ac3b9b716a0fd2f2149
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        '606a39d89246991a373564698c2d8383' => __DIR__ . '/..' . '/symfony/polyfill-php85/bootstrap.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '606a39d89246991a373564698c2d8383' => __DIR__ . '/..' . '/symfony/polyfill-php85/bootstrap.php',
         '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
         '662a729f963d39afe703c9d9b7ab4a8c' => __DIR__ . '/..' . '/symfony/polyfill-php83/bootstrap.php',
         '2203a247e6fda86070a5e4e07aed533a' => __DIR__ . '/..' . '/symfony/clock/Resources/now.php',
@@ -92,6 +92,7 @@ class ComposerStaticInitc57754c93ae34ac3b9b716a0fd2f2149
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Clock\\' => 24,
+            'Sichikawa\\LaravelSendgridDriver\\' => 32,
         ),
         'R' => 
         array (
@@ -325,6 +326,10 @@ class ComposerStaticInitc57754c93ae34ac3b9b716a0fd2f2149
         'Symfony\\Component\\Clock\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/clock',
+        ),
+        'Sichikawa\\LaravelSendgridDriver\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/s-ichikawa/laravel-sendgrid-driver/src',
         ),
         'Resend\\Laravel\\' => 
         array (
@@ -6215,6 +6220,10 @@ class ComposerStaticInitc57754c93ae34ac3b9b716a0fd2f2149
         'SebastianBergmann\\Type\\UnknownType' => __DIR__ . '/..' . '/sebastian/type/src/type/UnknownType.php',
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/type/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Sichikawa\\LaravelSendgridDriver\\MailServiceProvider' => __DIR__ . '/..' . '/s-ichikawa/laravel-sendgrid-driver/src/MailServiceProvider.php',
+        'Sichikawa\\LaravelSendgridDriver\\SendGrid' => __DIR__ . '/..' . '/s-ichikawa/laravel-sendgrid-driver/src/SendGrid.php',
+        'Sichikawa\\LaravelSendgridDriver\\SendgridTransportServiceProvider' => __DIR__ . '/..' . '/s-ichikawa/laravel-sendgrid-driver/src/SendgridTransportServiceProvider.php',
+        'Sichikawa\\LaravelSendgridDriver\\Transport\\SendgridTransport' => __DIR__ . '/..' . '/s-ichikawa/laravel-sendgrid-driver/src/Transport/SendgridTransport.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Component\\Clock\\Clock' => __DIR__ . '/..' . '/symfony/clock/Clock.php',
         'Symfony\\Component\\Clock\\ClockAwareTrait' => __DIR__ . '/..' . '/symfony/clock/ClockAwareTrait.php',
