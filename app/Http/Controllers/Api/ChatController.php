@@ -32,9 +32,9 @@ class ChatController extends Controller
 
         // 1. Buscar o crear el chat 1 a 1
         $chat = Chat::whereHas('usuarios', fn($q) => $q->where('user_id', $emisor->id))
-                    ->whereHas('usuarios', fn($q) => $q->where('user_id', $receptor->id))
-                    //->where('es_grupal', false)
-                    ->first();
+            ->whereHas('usuarios', fn($q) => $q->where('user_id', $receptor->id))
+            //->where('es_grupal', false)
+            ->first();
 
         if (!$chat) {
             //$chat = Chat::create(['uuid' => Str::uuid()]);
@@ -51,7 +51,7 @@ class ChatController extends Controller
 
         // 3. Notificar a Pusher
         broadcast(new EnviarMensaje($mensaje))->toOthers();
-
+        \Log::info("Disparando evento en chat: " . $chat->id);
         //return response()->json($mensaje->load('emisor'), 201);
         return response()->json([
             //'chat' => $chat->load('usuarios'),
