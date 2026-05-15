@@ -17,8 +17,8 @@ class AdminSeeder extends Seeder
         // php artisan make:seeder 'AdminSeeder'
         User::forceCreate([
             'nickname' => 'admin',
-            'email'    => 'soloadmin@institutmvm.cat',
-            'password' => Hash::make('soloadmin123'),
+            'email'    => 'administrador@institutmvm.cat',
+            'password' => Hash::make('@dministr@d0r'),
             'rol'      => 'admin',
             'email_verified_at' => now(),
         ]);
