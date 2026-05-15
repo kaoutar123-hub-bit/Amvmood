@@ -91,4 +91,19 @@ class UserController extends Controller
     public function getUsers() {
         return User::select('id', 'nickname', 'foto_perfil')->where('id', '!=', auth()->id())->get();
     }
+
+    public function deleteUser() {
+        $user = Auth::user();
+
+        $user->chats()->delete();
+        $user->comentarios()->delete();
+        $user->likes()->delete();
+        $user->publicaciones()->delete();
+        $user->tokens()->delete();
+        $user->delete();
+
+        return response()->json([
+            null
+        ], 204);
+    }
  }

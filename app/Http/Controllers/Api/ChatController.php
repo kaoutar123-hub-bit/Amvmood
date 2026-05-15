@@ -26,15 +26,15 @@ class ChatController extends Controller
         if (!$receptor) {
             return response()->json([
                 'error' => 'El recepto no existe',
-                'receptor_id_recibido' => $request->receptor_id
+                'receptor_id_recibido' -> $request->receptor_id
             ], 422);
         }
 
         // 1. Buscar o crear el chat 1 a 1
         $chat = Chat::whereHas('usuarios', fn($q) => $q->where('user_id', $emisor->id))
-            ->whereHas('usuarios', fn($q) => $q->where('user_id', $receptor->id))
-            //->where('es_grupal', false)
-            ->first();
+                    ->whereHas('usuarios', fn($q) => $q->where('user_id', $receptor->id))
+                    //->where('es_grupal', false)
+                    ->first();
 
         if (!$chat) {
             //$chat = Chat::create(['uuid' => Str::uuid()]);
