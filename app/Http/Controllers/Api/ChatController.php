@@ -26,7 +26,7 @@ class ChatController extends Controller
         if (!$receptor) {
             return response()->json([
                 'error' => 'El recepto no existe',
-                'receptor_id_recibido' -> $request->receptor_id
+                'receptor_id_recibido' => $request->receptor_id
             ], 422);
         }
 
